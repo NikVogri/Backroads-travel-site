@@ -13,7 +13,6 @@ const Navbar = () => {
   const toggleNav = () => {
     setIsOpen(!isOpen)
   }
-  console.log(isOpen)
   return (
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
