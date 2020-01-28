@@ -1,24 +1,39 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import StyledHero from "../components/StyledHero/StyledHero.component"
 import Layout from "../components/Layout/Layout.component"
-import Hero from "../components/Hero/Hero.component"
 import Banner from "../components/Banner/Banner.component"
 import Services from "../components/services/Services.component"
 import About from "../components/About/About.component"
-// import styles from "../components/Layout.module.css"
-export default () => (
-  <Layout>
-    <Hero>
-      <Banner
-        title="continue exploring"
-        info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, architecto?"
-      >
-        <Link to="/tours" className="btn-white">
-          explore tours
-        </Link>
-      </Banner>
-    </Hero>
-    <About />
-    <Services />
-  </Layout>
-)
+
+export default ({ data }) => {
+  console.log(data)
+  return (
+    <Layout>
+      <StyledHero home img={data.defaultBcg.childImageSharp.fluid}>
+        <Banner
+          title="continue exploring"
+          info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, architecto?"
+        >
+          <Link to="/tours" className="btn-white">
+            explore tours
+          </Link>
+        </Banner>
+      </StyledHero>
+      <About />
+      <Services />
+    </Layout>
+  )
+}
+
+export const getHeaderImage = graphql`
+  query {
+    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 4160, quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
