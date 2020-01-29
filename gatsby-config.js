@@ -5,7 +5,7 @@
  */
 
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env.development`,
 })
 
 module.exports = {
@@ -36,9 +36,10 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `${process.env.spaceId}`,
-        accessToken: `${process.env.accessToken}`,
+        spaceId: process.env.spaceId,
+        accessToken: process.env.accessToken,
       },
     },
+    `gatsby-plugin-playground`,
   ],
 }

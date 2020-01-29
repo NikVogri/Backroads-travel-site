@@ -5,9 +5,8 @@ import Layout from "../components/Layout/Layout.component"
 import Banner from "../components/Banner/Banner.component"
 import Services from "../components/services/Services.component"
 import About from "../components/About/About.component"
-
+import FeaturedTours from "../components/FeaturedTours/FeaturedTours.component"
 export default ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <StyledHero home img={data.defaultBcg.childImageSharp.fluid}>
@@ -22,6 +21,7 @@ export default ({ data }) => {
       </StyledHero>
       <About />
       <Services />
+      <FeaturedTours />
     </Layout>
   )
 }
