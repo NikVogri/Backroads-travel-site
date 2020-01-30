@@ -2,11 +2,12 @@ import React from "react"
 import Layout from "../components/Layout/Layout.component"
 import { graphql } from "gatsby"
 import StyledHero from "../components/StyledHero/StyledHero.component"
+import Tours from "../components/Tours/Tours.component"
 export default ({ data }) => {
   return (
     <Layout>
       <StyledHero img={data.defaultBcg.childImageSharp.fluid} />
-      <div>this is the tour page</div>
+      <Tours />
     </Layout>
   )
 }

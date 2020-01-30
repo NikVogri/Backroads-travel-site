@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Title from "../Title/Title.component"
 import styles from "./items.module.css"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 const getFeaturedTours = graphql`
   query {
     featuredTours: allContentfulTour(filter: { featured: { eq: true } }) {
@@ -28,7 +29,6 @@ const getFeaturedTours = graphql`
 const FeaturedTours = () => {
   const response = useStaticQuery(getFeaturedTours)
   const tours = response.featuredTours.edges
-  console.log(tours)
   return (
     <div className={styles.tours}>
       <Title title="featured" subtitle="tours" />
