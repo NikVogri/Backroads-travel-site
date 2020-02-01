@@ -38,7 +38,7 @@ export const getHeaderImage = graphql`
     defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 4160, quality: 90) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid
         }
       }
     }

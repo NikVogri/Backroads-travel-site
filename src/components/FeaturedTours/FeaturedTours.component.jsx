@@ -17,7 +17,7 @@ const getFeaturedTours = graphql`
           contentful_id
           images {
             fluid {
-              ...GatsbyContentfulFluid_withWebp
+              ...GatsbyContentfulFluid
             }
           }
         }
