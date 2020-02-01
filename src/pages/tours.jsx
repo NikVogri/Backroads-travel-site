@@ -3,9 +3,11 @@ import Layout from "../components/Layout/Layout.component"
 import { graphql } from "gatsby"
 import StyledHero from "../components/StyledHero/StyledHero.component"
 import Tours from "../components/Tours/Tours.component"
+import SEO from "../components/SEO/SEO"
 export default ({ data }) => {
   return (
     <Layout>
+      <SEO title="Tours" />
       <StyledHero img={data.defaultBcg.childImageSharp.fluid} />
       <Tours />
     </Layout>

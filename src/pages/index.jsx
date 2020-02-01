@@ -6,9 +6,16 @@ import Banner from "../components/Banner/Banner.component"
 import Services from "../components/services/Services.component"
 import About from "../components/About/About.component"
 import FeaturedTours from "../components/FeaturedTours/FeaturedTours.component"
+import SEO from "../components/SEO/SEO"
+
 export default ({ data }) => {
   return (
     <Layout>
+      <SEO
+        title="Home"
+        description="BackRoads is a blog and travel website where you can find amazing and 
+        cheap travel ideas with blogs to inform you all about them!"
+      />
       <StyledHero home img={data.defaultBcg.childImageSharp.fluid}>
         <Banner
           title="continue exploring"

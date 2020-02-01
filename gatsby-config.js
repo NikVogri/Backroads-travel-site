@@ -14,11 +14,7 @@ module.exports = {
     description:
       "Explore awesome tours, cheap & without any non-sense, you get for what you pay for! Unique experiences with professional guides. Forget your daily routine & say yes to your adventure",
     auth: "@Nick",
-    data: {
-      name: "nick",
-      age: 21,
-      country: "slovenia",
-    },
+    siteUrl: "https://www.backroads-test.netlify.com",
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -26,6 +22,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.backroads-test.netlify.com",
+        sitemap: "https://www.backroads-test.netlify.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

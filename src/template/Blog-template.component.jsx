@@ -4,6 +4,7 @@ import Layout from "../components/Layout/Layout.component"
 import styles from "./single-blog.module.css"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import SEO from "../components/SEO/SEO"
 
 const Blog = ({ data }) => {
   const {
@@ -31,7 +32,7 @@ const Blog = ({ data }) => {
         )
       },
       "embedded-entry-block": node => {
-        const { slug, title, image, text } = node.data.target.fields
+        const { title, image, text } = node.data.target.fields
         return (
           <div className={styles.embedded}>
             <h1>{title["en-US"]}</h1>
@@ -48,6 +49,7 @@ const Blog = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
       <section className={styles.blog}>
         <div className={styles.center}>
           <h1>{title}</h1>

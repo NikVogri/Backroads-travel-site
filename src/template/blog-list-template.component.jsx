@@ -5,7 +5,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import BlogCard from "../components/BlogCard/BlogCard.component"
 import styles from "../components/BlogList/blog.module.css"
 import Title from "../components/Title/Title.component"
-
+import SEO from "../components/SEO/SEO"
 const BlogListTemplate = props => {
   const { currentPage, numPages } = props.pageContext
   const { data } = props
@@ -14,6 +14,7 @@ const BlogListTemplate = props => {
     currentPage - 1 === 1 ? `/blogs` : `/blogs/${currentPage - 1}`
   return (
     <Layout>
+      <SEO title="Blogs" />
       <section className={styles.blog}>
         <Title title="lastest" subtitle="posts" />
         <div className={styles.center}>
