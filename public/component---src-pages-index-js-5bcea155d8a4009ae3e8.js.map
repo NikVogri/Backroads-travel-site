@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/index.js"],"names":[],"mappings":"2FAAA,gCAEe,4BAAM","file":"component---src-pages-index-js-5bcea155d8a4009ae3e8.js","sourcesContent":["import React from \"react\"\r\n\r\nexport default () => <div>Hellso world343!</div>\r\n"],"sourceRoot":""}

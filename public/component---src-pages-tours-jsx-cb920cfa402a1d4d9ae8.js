@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{jeRg:function(e,a,t){"use strict";t.r(a),t.d(a,"getHeaderImage",(function(){return i}));var n=t("q1tI"),r=t.n(n),u=t("1g+t"),c=t("RSc5");a.default=function(e){var a=e.data;return r.a.createElement(u.a,null,r.a.createElement(c.a,{img:a.defaultBcg.childImageSharp.fluid}),r.a.createElement("div",null,"this is the tour page"))};var i="4285182857"}}]);
+//# sourceMappingURL=component---src-pages-tours-jsx-cb920cfa402a1d4d9ae8.js.map
