@@ -41,5 +41,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`,
   ],
 }

@@ -63,7 +63,7 @@ const Tour = ({ data }) => {
     </Layout>
   )
 }
-export const query = graphql`
+const query = graphql`
   query($slug: String!) {
     tour: contentfulTour(slug: { eq: $slug }) {
       price
@@ -80,7 +80,7 @@ export const query = graphql`
       }
       images {
         fluid {
-          ...GatsbyContentfulFluid_tracedSVG
+          ...GatsbyContentfulFluid
         }
       }
     }
