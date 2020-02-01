@@ -21,6 +21,8 @@
   letter-spacing: var(--mainSpacing);
   background: var(--primaryColor);
   color: var(--mainWhite);
+  text-decoration: none;
+  font-weight: bold;
   border: 2px solid var(--primaryColor);
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
